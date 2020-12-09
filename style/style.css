@@ -5,30 +5,75 @@
 }
 
 /* -----------------------------NavBar-------------------------------*/
-.navbar-nav li{
-    width: 160px;
-    text-align: center;
-    font-size: 0.95rem;
+.carousel-item {
+	height: 100vh;
+	min-height: 300px;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
-
-.navbar{
-    z-index: 10px;
+.fixed-top {
+    background-color: white;
     position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.carousel-caption {
+    bottom: 270px;
+}
+.carousel-caption h5 {
+	font-size: 45px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-top: 25px;
+}
+.carousel-caption p {
+	width: 75%;
+	margin: auto;
+	font-size: 18px;
+	line-height: 1.9;
+}
+.navbar-light .navbar-brand {
+	color: #fff;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+	color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: white;
+}
+.navbar-toggler {
+	background: #fff;
+}
+a.nav-link{
+    color: white;
+}
+.navbar-nav {
+	text-align: center;
+}
+.nav-link {
+	padding: .2rem 1rem;
+}
+.nav-link.active, .nav-link:focus {
+	color: #fff;
+}
+.navbar-toggler {
+	padding: 1px 5px;
+	font-size: 18px;
+	line-height: 0.3;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: #fff;
 }
 
-.navbar-nav{
-    display: flex;
-}
-
-.navbar-nav ul{
-    margin-top: 10px;
-}
-.navbar-collapse {
-    right: 60px;
-}
-.navbar-brand img{
-    width: 50px;
-}
 /*----------------------------- Header -------------------------------*/
 .overlay{
     position: relative;
@@ -48,17 +93,17 @@
     text-align: center;
     margin: 140px;
 }
-.headerAbout, .headerSer{
+.headerAbout{
     padding-top: 0px;
     margin-bottom: 30px;
 }
 h3{
     color: #0F996D;
-    margin: 40px;
+    margin: auto;
     font-size: x-large;
     font-family: Poppins;
 }
-.about-us div , .our-services div{
+.about-us div , .our-services div {
     text-align: center;
     margin: auto;
     word-spacing: 4px;
@@ -67,13 +112,14 @@ h3{
 }
 /*--------------------------- services --------------------------- */
 .our-services{
-    background-image: url(../images/ser.png);
+    background-image: url(../images/groupBack.png);
     background-color: rgba(15, 15, 15, 0.62);
     /*background-size: cover;*/
     background-size: cover;
     background-attachment: fixed;
     margin: auto;
-    height: 900px;
+    height: 100%;
+    width: 100%;
 }
 h3{
     padding-top: 80px;
@@ -121,10 +167,11 @@ h3{
 
 
 /* ------------------------------------- portfolio ---------------------------- */
-.portfolio{
+.portfolio , .ContactUs{
     text-align: center;
     margin: auto;
-    padding: 150px;
+    margin-bottom: 90px;
+    padding: 10px 150px;
 }
 
 .tab-content , .mb-3{
@@ -135,4 +182,120 @@ h3{
     margin-bottom: 80px;
     margin-top: 15px;
     font-family: Century-Gothic;
+}
+
+.image-grid img {
+    margin-bottom: 1rem;
+ }
+
+ .portfolio .mb-3 {
+    margin-bottom: 4rem!important;
+}
+
+.portfolio .btn-outline-success {
+    margin-top: 80px;
+    color: #0F996D;
+    border-color: #0F996D;
+    font-family: Poppins;
+    font-size: medium;
+    width: 180px;
+}
+
+.portfolio .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: rgb(255, 255, 255);
+    background-color: #0F996D;
+}
+
+.portfolio a {
+    color: #707070;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.portfolio a:hover{
+    color: black;
+}
+
+.portfolio .btn-outline-success:hover{
+    color: white;
+    background-color: #0F996D;
+    
+}
+/*----------------------------------------- Contact Us----------------------------- */
+
+.ContactUs{
+    background-color: #F5F5F5;
+}
+
+.ContactUs .img{
+    display: inline-block;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.ContactUs img{
+    width: 65px;
+    height: 65px;
+    margin: 30px 130px;
+
+}
+
+.contact-form{
+
+    margin-top:15px;
+    
+}
+.contact-form .textarea{
+
+    min-height:220px; resize:none;
+
+}
+
+.form-control{ 
+    box-shadow:none; 
+    border-color:#eee; 
+    height:49px;}
+.form-control:focus{ 
+    box-shadow:none; 
+    border-color:#00b09c;}
+
+.form-control-feedback{ 
+    line-height:50px;
+}
+.main-btn{ 
+    background:#00b09c; 
+    border-color:#00b09c; 
+    color:#fff;}
+.main-btn:hover{ 
+    background:#00a491;
+    color:#fff;
+}
+.form-control-feedback {
+line-height: 50px;
+top: 0px;
+}
+
+form  {
+    margin: 40px auto;
+    width: 700px;
+}
+
+.Form .btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
