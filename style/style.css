@@ -37,6 +37,29 @@
 	font-size: 18px;
 	line-height: 1.9;
 }
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0F996D;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
 .navbar-light .navbar-brand {
 	color: #fff;
 	font-size: 25px;
@@ -75,17 +98,40 @@ a.nav-link{
 }
 
 /*----------------------------- Header -------------------------------*/
-.overlay{
-    position: relative;
+.Header{
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(151, 136, 136, 0.8);
+    height: 780px;
+    background-repeat: no-repeat;
+    background-image: url(../images/header.png);
+    background-size: auto;
 }
-.overlay img{
-    position: relative;
-    size: cover;
+.Header .ahmad{
+    position: absolute;
+    width: 50%;
+    margin:120px 100px;
+}
+.ahmad h5{
+    font-weight: bolder;
+    color: #0F996D;
+    font-family: Oswald;
+    margin-top: 90px;
+}
+.ahmad h1{
+    color: white;
+    font-size: 65px;
+    font-weight: bolder;
+    font-family: Oswald;
+}
+.ahmad button{
+    margin-top: 15px ;
+    width: 230px;
+    background-color: #0F996D;
+    color: white;
+}
+.ahmad button:hover{
+    background-color:transparent;
+    border-color: #0F996D;
+    color: white;
 }
 
 /*---------------------------about-us ------------------------*/
@@ -284,18 +330,25 @@ form  {
 .Form .btn {
     display: inline-block;
     font-weight: 400;
-    color: #212529;
+    color: white;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
+    background-color: #0F996D;
+    border: 1px solid #0F996D;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.Form .btn:hover{
+    border: 1px solid #0F996D;
+    background-color: #F5F5F5;
+    color: #0F996D;
+
 }
